@@ -14,13 +14,13 @@ function AsideMenu(){
                 <h5 className="text-lg font-semibold mb-2 relative">Overview</h5>
                 <ul className="h-0 invisible md:h-auto md:visible overflow-hidden">
                   <li>
-                    <a href="#" className="hover:underline py-1 block">Shipping</a>
+                    <a href="/" className="hover:underline py-1 block">Shipping</a>
                   </li>
                   <li>
-                    <a href="#" className="hover:underline py-1 block">Refund</a>
+                    <a href="/" className="hover:underline py-1 block">Refund</a>
                   </li>
                   <li>
-                    <a href="#" className="hover:underline py-1 block">Promotion</a>
+                    <a href="/" className="hover:underline py-1 block">Promotion</a>
                   </li>
                 </ul>
               </div>
@@ -28,13 +28,13 @@ function AsideMenu(){
                 <h5 className="text-lg font-semibold mb-2 relative">Company</h5>
                 <ul className="h-0 invisible md:h-auto md:visible overflow-hidden">
                   <li>
-                    <a href="#" className="hover:underline py-1 block">About</a>
+                    <a href="/" className="hover:underline py-1 block">About</a>
                   </li>
                   <li>
-                    <a href="#" className="hover:underline py-1 block">Career</a>
+                    <a href="/" className="hover:underline py-1 block">Career</a>
                   </li>
                   <li>
-                    <a href="#" className="hover:underline py-1 block">Contact Us</a>
+                    <a href="/" className="hover:underline py-1 block">Contact Us</a>
                   </li>
                 </ul>
               </div>
@@ -42,17 +42,17 @@ function AsideMenu(){
                 <h5 className="text-lg font-semibold mb-2 relative">Explore</h5>
                 <ul className="h-0 invisible md:h-auto md:visible overflow-hidden">
                   <li>
-                    <a href="#" className="hover:underline py-1 block"
+                    <a href="/" className="hover:underline py-1 block"
                       >Terms & Conds</a
                     >
                   </li>
                   <li>
-                    <a href="#" className="hover:underline py-1 block"
+                    <a href="/" className="hover:underline py-1 block"
                       >Privacy Policy</a
                     >
                   </li>
                   <li>
-                    <a href="#" className="hover:underline py-1 block"
+                    <a href="/" className="hover:underline py-1 block"
                       >For Developer</a
                     >
                   </li>
@@ -62,7 +62,7 @@ function AsideMenu(){
                 <h5 className="text-lg font-semibold mb-2 relative">
                   Special Letter
                 </h5>
-                <form action="#">
+                <form action="/">
                   <label className="relative w-full">
                     <input
                       type="text"

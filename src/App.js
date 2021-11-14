@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route, Router } from 'workbox-routing';
 import AsideMenu from './component/AsideMenu';
 import BrowseRoom from './component/BrowseRoom';
 import Clients from './component/Clients';
@@ -6,14 +7,53 @@ import Footer from './component/Footer';
 import Header from './component/Header';
 import Hero from './component/Hero';
 import JustArrived from './component/JustArrived';
+import Details from './pages/Details';
+import Offline from './component/Offline';
 
 function App() {
+  const [items, setItems] = React.useState([]);
+  const [offlineStatus, setOfflineStatus] = React.useState(!navigator.onLine);
+  function handleofflinestatus(){
+    setOfflineStatus(!navigator.onLine);
+  }
+  React.useEffect(function(){
+    (async function () {
+      const response = await fetch('https://prod-qore-app.qorebase.io/8ySrll0jkMkSJVk/allItems/rows?limit=7&offset=0&$order=asc', {
+        method: 'GET',
+        headers:{
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+          // 'x-api-key': process.env.REACT_APP_APIKEY
+        }
+      });
+      const {nodes} = await response.json();
+      setItems(nodes);
+
+      const script = document.createElement("script");
+      script.src = "/carousel.js";
+      script.async = false;
+      document.body.appendChild(script);
+    })();
+
+    handleofflinestatus();
+    window.addEventListener('online', handleofflinestatus);
+    window.addEventListener('offline', handleofflinestatus);
+
+    return function(){
+      window.removeEventListener('online', handleofflinestatus);
+      window.removeEventListener('offline', handleofflinestatus);
+
+    }
+    
+  }, [offlineStatus]);
+
   return (
     <>
+    {offlineStatus && <Offline/>}
     <Header></Header>
     <Hero></Hero>
     <BrowseRoom></BrowseRoom>
-    <JustArrived></JustArrived>
+    <JustArrived items={items}></JustArrived>
     <Clients></Clients>
     <AsideMenu></AsideMenu>
     <Footer></Footer>
@@ -80,3 +120,13 @@ function App() {
 }
 
 export default App;
+
+// export default function Routes(){
+//   return(
+//     <Router>
+//       <Route path="/" exact component={App}></Route>
+//       <Route path="/detail:id" exact component={Details}></Route>
+//       {/* <Route path="/profile" exact component={Profile}></Route> */}
+//     </Router>
+//   )
+// }

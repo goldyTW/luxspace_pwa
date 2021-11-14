@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Router } from 'workbox-routing';
+// import { Route, Router } from 'workbox-routing';
 import AsideMenu from './component/AsideMenu';
 import BrowseRoom from './component/BrowseRoom';
 import Clients from './component/Clients';
@@ -7,7 +7,7 @@ import Footer from './component/Footer';
 import Header from './component/Header';
 import Hero from './component/Hero';
 import JustArrived from './component/JustArrived';
-import Details from './pages/Details';
+// import Details from './pages/Details';
 import Offline from './component/Offline';
 
 function App() {

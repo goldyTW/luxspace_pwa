@@ -43,7 +43,7 @@ function ArrivedItem({item}){
             </div>
             <h5 className="text-lg font-semibold mt-4">{item.name}</h5>
             <span className="">{numberFormat(item.price)}</span>
-            <a href="/detail" className="stretched-link"></a>
+            <a href="/detail" className="stretched-link">Link</a>
             {/* <Link to={`/details/${item.id}`} className="stretched-link">
             
             </Link> */}

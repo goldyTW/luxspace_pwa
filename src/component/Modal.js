@@ -10,6 +10,7 @@ function Modal({handleShowModal}){
                         height="100%"
                         src="https://www.youtube.com/embed/3h0_v1cdUIA"
                         frameborder="0"
+                        title="iframe"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen
                     ></iframe>
